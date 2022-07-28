@@ -1,34 +1,61 @@
 
-confirm("Estas por Ingresar al primer Desafio Complementario, ¿Desea Continuar?")
 
-//debugger
-
-let nombre = ""
-nombre = nombre.toLocaleLowerCase()
+let usuario = ""
+usuario = usuario.toLocaleLowerCase()
 
 let contraseña = ""
 let = login = false
 
-// While
-
 
 while(login === false){
-    nombre = prompt("Ingrese su nombre")
+    usuario = prompt("Ingrese su nombre")
     contraseña = prompt("Ingrese su clave")
-    if(nombre === "franco" && contraseña === "desafio1"){
-        console.log("Bienvenido al Desafio Complementario" + " " + nombre)
+    if(usuario != "franco" && contraseña != "franco"){
+        console.log("Bienvenido", usuario)
         login = true
     }else{
-        alert(" ⛔️⛔️Ingrese bien su nombre y contraseña⛔️⛔️")
+        alert(" Ingrese un usuario y/o contraseña correcta! ⛔️")
     }
 }
+    
+debugger
 
 
-// SENTENCIA for
+let = producto = prompt("Que desea comprar? remera, buzo o campera?")
+    producto = producto.toLocaleLowerCase()
+let = cantidad = parseInt(prompt("cuantas prendas queres?"))
 
-let numero = parseInt(prompt("Ingrese un numero"))
-let limite = numero * 2
+    switch (producto) {
+        case "remera":
+            console.log("elegiste", cantidad, "remera y/o remeras con valor de ", '3000'*cantidad)
+            
+            break
+        
+        case "buzo":
+            console.log("elegiste", cantidad, "buzo y/o buzos con valor de", '5000'*cantidad)
 
-for (let i = numero; i <= limite; i++){
-    console.log("Repeticion de Numero:" , i)
-}
+            break
+
+        case "campera":
+            console.log("elegiste", cantidad, "campera y/o camperas con valor de", 10000*cantidad)
+
+            break
+    
+        default:
+            console.warn("Elegi una prenda correspondiente.")
+            alert("Elegi una prenda correspondiente.")
+    
+    }
+
+
+
+
+
+    
+    
+    
+    
+    
+
+    
+
