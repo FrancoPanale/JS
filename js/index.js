@@ -1,61 +1,146 @@
 
+// TIENDA DE INDUMENTARIA
 
-let usuario = ""
-usuario = usuario.toLocaleLowerCase()
-
-let contraseña = ""
-let = login = false
-
-
-while(login === false){
-    usuario = prompt("Ingrese su nombre")
-    contraseña = prompt("Ingrese su clave")
-    if(usuario != "franco" && contraseña != "franco"){
-        console.log("Bienvenido", usuario)
-        login = true
-    }else{
-        alert(" Ingrese un usuario y/o contraseña correcta! ⛔️")
+function ingresarUsuario(){
+    alert("Bienvenido a Ragnar Indumentaria")
+    
+    let  usuario = prompt("Ingrese su usuario:")
+    let  contraseña = prompt("Ingrese su contraseña:")  
+    
+    while (usuario === "" || usuario === null || contraseña === "" || contraseña === null) {
+        
+        usuario = prompt("Ingrese su usuario:");
+        contraseña = prompt("Ingrese su contraseña:");
     }
 }
+
+
+function elegirIndumentaria(){
     
-debugger
-
-
-let = producto = prompt("Que desea comprar? remera, buzo o campera?")
-    producto = producto.toLocaleLowerCase()
-let = cantidad = parseInt(prompt("cuantas prendas queres?"))
-
-    switch (producto) {
+    let item;
+    
+    do{
+        item = prompt("Que desea comprar? \nRemera \nBuzo  \nCampera \nZapatillas?");
+    } while(item != "remera" && item != "buzo" && item != "campera" && item != "zapatillas");
+    
+    switch(item){
         case "remera":
-            console.log("elegiste", cantidad, "remera y/o remeras con valor de ", '3000'*cantidad)
-            
-            break
+            return "remera"
         
         case "buzo":
-            console.log("elegiste", cantidad, "buzo y/o buzos con valor de", '5000'*cantidad)
-
-            break
+            return "buzo"
 
         case "campera":
-            console.log("elegiste", cantidad, "campera y/o camperas con valor de", 10000*cantidad)
+            return "campera"
 
-            break
+        case "zapatillas":
+            return "zapatillas"    
+        }
     
-        default:
-            console.warn("Elegi una prenda correspondiente.")
-            alert("Elegi una prenda correspondiente.")
-    
+}
+
+function precioInd(prenda) {
+    if(prenda === "remera"){
+        return 5000
+    }else if (prenda === "buzo"){
+        return 13200
+    }else if (prenda === "campera"){
+        return 25500
+    }else { 
+        return 53000
     }
+}
+
+function cobrar(producto,precio){
+    alert("Estas a punto de comprar lo siguiente:" + " " + producto + "$" + precio);
+}
+
+ingresarUsuario()
+let verItem = elegirIndumentaria()
+let pagar = precioInd(verItem)
+cobrar(verItem,pagar)
+
+let  credito = prompt("Como desea pagar? \nEfectivo \nTarjeta")
 
 
-
-
-
+if(credito == "efectivo"){
+        var  billete = parseInt(prompt("Con cuanto abonas?"));
+    }else if (credito == "tarjeta"){
+        var cuotas = parseInt(prompt("En cuantas cuotas lo hacemos?"));
+    }else{
+        alert("No aceptamos ese metodo de pago! ⛔️")
+    }
     
-    
-    
-    
-    
+if(cuotas > 1 || billete === null){
+    alert("Te quedaria en" + " " + cuotas + " " + "cuotas de" + " " + "$" + (pagar / cuotas) + " "+"Gracias por confiar en Ragnar Indumentaria." );
+}else if (cuotas == 1 || billete === null){
+    alert("Lo hacemos en un pago entonces, gracias por comprar en Ragnar Indumentaria.")
 
+}else if(billete > pagar || cuotas === null){
+    alert("Gracias tu vuelto es de" + " " + "$" + (billete - pagar));
     
+}else if (billete == pagar || cuotas === null){
+    alert("Gracias por comprar en Ragnar Indumentaria.")
+    }else{
+    alert("No te alcanza la plata, volve mas tarde!")
+}
 
+
+
+
+
+
+/*if(credito == "efectivo"){
+    pagoEfectivo = parseInt(prompt("Con cuanto vas a abonar?"))
+}else{
+    pagoTarjeta = parseInt(prompt("En cuantas cuotas lo hacemos?"))
+}
+
+while (pagoEfectivo > pagar || pagoEfectivo == pagar || pagoEfectivo < pagar){
+    if (pagoEfectivo > pagar){
+        alert("Gracias, tu vuelto es" + pagoEfectivo - pagar)
+        break
+    }else if (pagoEfectivo == pagar){
+        alert("Gracias por comprar en Ragnar Indumentaria")
+        break
+    }else {
+        alert("No te alcanza la plata, volve pronto")
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function metodoPago1(){
+    
+    let credito = prompt("Como desea pagar? \nEfectivo \nTarjeta")
+debugger
+    while(credito == "efectivo" || credito == "tarjeta") {
+            //alert("Vamos a ver con que me pagas")
+    
+            if(credito == "efectivo"){
+                let pagoEfectivo = parseInt(prompt("Con cuanto me pagas?"));
+                break
+            } else if (credito == "tarjeta") {
+                let pagoTarjeta = parseInt(prompt("En cuantas cuotas lo hacemos?"));
+                break
+            } else {
+                alert ("Elegi el metodo de pago correspondiente.")
+            }
+        }
+}*/
