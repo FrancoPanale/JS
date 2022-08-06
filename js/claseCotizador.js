@@ -13,7 +13,7 @@ class CotizadorHogar {
     }
     cotizarPoliza() {
         const costoTotal = this.factor * this.metros2 * this.adicionalAlarma()
-                 console.log("El costo del seguro para su propiedad es: $", costoTotal)
+                    console.log("El costo del seguro para su propiedad es: $", costoTotal)
     }
 }
 
@@ -24,5 +24,5 @@ function cotizarSeguro() {
     const metros2 = prompt("Ingrese los metros cuadrados de su hogar:")
     const alarma = confirm("¿Posee alarma instalada?")
     const cotizador = new CotizadorHogar(metros2, alarma, valorFijo)
-          cotizador.cotizarPoliza()
+            cotizador.cotizarPoliza()
 }

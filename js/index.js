@@ -88,6 +88,117 @@ if(cuotas > 1 || billete === null){
 
 
 
+//  LISTADO DE PRODUCTOS
+
+
+const IVA = 1.21
+
+class Producto{
+    
+    constructor (nombre , precio , stock){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
+    precioConIVA () {
+        let precioFinal = this.precio * IVA;
+        return "$" + precioFinal;
+    };
+    
+    restarStock (unidades) {
+        this.stock = this.stock - unidades;
+    };
+}
+
+const prod1 = new Producto ("Remera Trasher" , 5000 , 15)
+const prod2 = new Producto ("Buzo Trasher" , 14000 , 6)
+const prod3 = new Producto ("Jean" , 13700 , 10)
+const prod4 = new Producto ("Nike Air Max" , 25000 , 20)
+const prod5 = new Producto ("Campera Nike Reversible" , 29999 , 4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*if(credito == "efectivo"){
