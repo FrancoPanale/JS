@@ -45,53 +45,57 @@ function ingresandoProducto (){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-function ingresarUsuario(){
-    alert("Bienvenido a Ragnar Indumentaria")
+function recorrerProductos() {
     
-    let  usuario = prompt("Ingrese su usuario:")
-    let  contraseña = prompt("Ingrese su contraseña:")  
-    
-    while (usuario === "" || usuario === null || contraseña === "" || contraseña === null) {
-        
-        usuario = prompt("Ingrese su usuario:");
-        contraseña = prompt("Ingrese su contraseña:");
+    mercaderia.forEach(elemento => {
+            console.table(elemento)
+        })
     }
-}
 
-function elegirProducto(){
-    let item;
-    do{
-        item = prompt("Que desea comprar? \nRemera \nBuzo  \nCampera \nZapatillas \nJean?");
-    } while(item != "remera" && item != "buzo" && item != "campera" && item != "zapatillas" && item != "jean");
     
-    switch(item){
-        case "remera":
-            return prod1
+    
+    
+    
+    
+    function ingresarUsuario(){
+        alert("Bienvenido a Ragnar Indumentaria")
         
-        case "buzo":
-            return prod2
-
-        case "campera":
-            return prod5
-
-        case "zapatillas":
-            return prod4    
+        let  usuario = prompt("Ingrese su usuario:")
+        let  contraseña = prompt("Ingrese su contraseña:")  
         
-        case "jean":
-            return prod3
+        while (usuario === "" || usuario === null || contraseña === "" || contraseña === null) {
+            
+            usuario = prompt("Ingrese su usuario:");
+            contraseña = prompt("Ingrese su contraseña:");
+        }
     }
-}
+    
+recorrerProductos()
 
+    function elegirProducto(){
+        let item;
+        do{
+            item = prompt("Que desea comprar? \nRemera \nBuzo  \nCampera \nZapatillas \nJean?");
+        } while(item != "remera" && item != "buzo" && item != "campera" && item != "zapatillas" && item != "jean");
+        
+        switch(item){
+            case "remera":
+                return prod1
+                
+                case "buzo":
+                    return prod2
+                    
+                    case "campera":
+                        return prod5
+                        
+                        case "zapatillas":
+                            return prod4    
+                            
+                            case "jean":
+                                return prod3
+                            }
+                        }
+                        
 
 ingresarUsuario()
 let verProducto = elegirProducto()

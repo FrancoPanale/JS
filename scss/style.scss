@@ -23,7 +23,24 @@ body{
                 
                 .carrusel{
                     grid-area: foto;
-                    
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 25px;
+                    padding: 20px;
+                    .carrusel-div{
+                        width: 50%;
+                        .img1{
+                            width: 100%; 
+                        }
+                        .img2{
+                            width: 100%;
+                        }
+                        .img3{
+                            width: 100%;
+                            }
+                        }
                 }
                 .productos1{
                     grid-area: prod1;
@@ -48,8 +65,14 @@ body{
     }
     footer{
         grid-area: footer;
-        background-color: red;
-        }
+        background-color: black;
+        color: antiquewhite;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-around;
+        padding: 35px;  
+    }
     
     
 }

@@ -15,6 +15,24 @@ body main {
 }
 body main section .carrusel {
   grid-area: foto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px;
+  padding: 20px;
+}
+body main section .carrusel .carrusel-div {
+  width: 50%;
+}
+body main section .carrusel .carrusel-div .img1 {
+  width: 100%;
+}
+body main section .carrusel .carrusel-div .img2 {
+  width: 100%;
+}
+body main section .carrusel .carrusel-div .img3 {
+  width: 100%;
 }
 body main section .productos1 {
   grid-area: prod1;
@@ -36,5 +54,11 @@ body main section .productos2 {
 }
 body footer {
   grid-area: footer;
-  background-color: red;
+  background-color: black;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-around;
+  padding: 35px;
 }/*# sourceMappingURL=style.css.map */
