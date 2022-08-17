@@ -57,7 +57,7 @@ function recorrerProductos() {
     
     
     
-    function ingresarUsuario(){
+    /*function ingresarUsuario(){
         alert("Bienvenido a Ragnar Indumentaria")
         
         let  usuario = prompt("Ingrese su usuario:")
@@ -149,9 +149,60 @@ if(cuotas > 1 || billete === null){
 
 
 let controlStock = (verProducto.stock - 1)
-console.log("Te quedan" + " " + controlStock + " " + verProducto.nombre)
+console.log("Te quedan" + " " + controlStock + " " + verProducto.nombre)*/
 
 
 
 
 
+
+
+
+
+// AGREGANDO DOM
+
+const subTitulo = document.getElementById("subtitulo")
+const subTitulo2 = document.getElementById("subtitulo2")
+const parrafo = document.getElementsByClassName("horario")
+const ACrear = document.getElementById("parrafoACrear")
+
+function cambiarTexto(){
+    subTitulo.innerText = "Cambiamos desde DOM en js"
+    subTitulo2.innerText = "Cambiamos el otro Subtitulo desde DOM en js"
+    horario.innerText = "Horario de atencion es de lunes a viernes de 8 a 13hs y 15 a 20hs"
+}
+
+function agregarParrafo(){
+    ACrear.innerHTML = "<p>Agregamos un Parrafo desde DOM en JS</p>"
+}
+
+
+
+// Agregando eventos
+
+const btnSelect = document.querySelector("#button")
+const agregarCarrito = document.querySelectorAll("#agregar")
+const inputFooter = document.querySelector(".newsLetter")
+
+btnSelect.addEventListener("click", ()=> {
+        console.log("Tecla presionada")
+        btnSelect.title = "probando conexion"
+})
+
+function addToCart(){
+    agregarCarrito.forEach(carrito => {
+        
+        carrito.addEventListener("focus",()=>{
+        
+            carrito.title = "Vas a agregar este producto";
+        })
+    });
+}
+addToCart()
+
+function inputNews(){
+    inputFooter.addEventListener("focus",()=>{inputFooter.className = "seleccion"})
+    inputFooter.addEventListener("blur", ()=>{inputFooter.className = ""})
+
+}
+inputNews()

@@ -60,4 +60,9 @@ body footer {
   justify-content: space-between;
   align-content: space-around;
   padding: 35px;
+}
+
+.seleccion {
+  background-color: green;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

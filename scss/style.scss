@@ -50,6 +50,7 @@ body{
                     gap: 50px;
                     margin: 25px;
                     border: 5px solid;
+                    
                 }
                 .productos2{
                     grid-area: prod2;
@@ -73,6 +74,10 @@ body{
         align-content: space-around;
         padding: 35px;  
     }
-    
-    
+}
+
+
+.seleccion{
+    background-color: green;
+    color: white;
 }
