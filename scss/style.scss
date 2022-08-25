@@ -1,14 +1,10 @@
 body{
-    
-    header{
-        background-color: aquamarine;
-        text-align: center;
     .navbar{
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: nowrap;
     }
-    }
+    
     main{
         grid-area: foto foto foto
                     prod1 prod1 prod1
@@ -62,7 +58,11 @@ body{
                     border: 5px solid;
                 }
             }
-        
+        .cart{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
     }
     footer{
         grid-area: footer;
@@ -77,7 +77,35 @@ body{
 }
 
 
-.seleccion{
-    background-color: green;
-    color: white;
+
+
+
+
+
+// RESPONSIVE
+
+
+@media screen and (max-width: 768px){
+section{
+    .carrusel{
+        width: 100%;
+    }
+    .productos1{
+        flex-direction: row;
+        flex-wrap: wrap;
+        p{
+            font-size: 1rem;
+        }
+    }
+    .productos2{
+        flex-direction: row;
+        flex-wrap: wrap;
+        p{
+            font-size: 1rem;
+        }
+    }
+}    
+
+//footer{
+//}
 }

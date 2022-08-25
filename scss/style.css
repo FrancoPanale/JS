@@ -1,8 +1,4 @@
-body header {
-  background-color: aquamarine;
-  text-align: center;
-}
-body header .navbar {
+body .navbar {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
@@ -52,6 +48,11 @@ body main section .productos2 {
   margin: 25px;
   border: 5px solid;
 }
+body main .cart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 body footer {
   grid-area: footer;
   color: antiquewhite;
@@ -62,7 +63,22 @@ body footer {
   padding: 35px;
 }
 
-.seleccion {
-  background-color: green;
-  color: white;
+@media screen and (max-width: 768px) {
+  section .carrusel {
+    width: 100%;
+  }
+  section .productos1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section .productos1 p {
+    font-size: 1rem;
+  }
+  section .productos2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section .productos2 p {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
