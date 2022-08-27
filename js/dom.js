@@ -44,6 +44,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const inputFooter = document.querySelector(".newsLetter")
 const send = document.querySelector("#btnSubmit")
 const totalAPagar = document.querySelector(".total")
+const btnCart = document.querySelector(".addToCart")
 
 function Listado(){
     zapasNike.forEach((prod) => {
@@ -129,17 +130,36 @@ function eliminarProd(){
     });
 }
 
-/*function sumaTotal{
+/*function sumaTotal(){
     totalAPagar.innerHTML = `<h5>El total es:</h5>
                                 <p class"precioTotal">0.00</p>`
     let sumatoria = document.querySelector(".precioTotal")
     sumatoria = carrito + prod.precio
 }*/
 
+function btnNavCart(){
+    btnCart.addEventListener("click" , ()=>{
+        section = document.querySelector("#section")
+        section.innerHTML = `
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">${prod.nombre}</h5>
+            <p>Cantidad: ${prod.prodStock} Precio: $${prod.precio}</p>
+            <button class="btn btn-dark" id="eliminarZ${prod.id}">Eliminar del Carrito</button></div>
+        </div>            
+        <div class="pagarTotal">
+            <p> Su total a pagar es: $ </p>
+        </div>
+    
+        `
+    })
+}
+
+
 function inputNews(){
     send.addEventListener("click",()=>{
         console.log("click");
-        if (inputFooter === "" ) {
+        if (inputFooter === "" || inputFooter === null) {
             alert("Debe ingresar su e-mail correctamente")
         }else{
             alert("Gracias por suscribirse al newsletter de Ragnar Indumentaria.")
@@ -149,7 +169,24 @@ function inputNews(){
 
 }
 
+
+//USO DE LIBRERIA SWEET ALERT
+
+/*const libSweet = (mensaje) =>{
+    Swal.fire({
+        title: 'Ingresa tu usuario:',
+        input: "email"
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    })
+}*/
+
 ingresarUsuario()
 Listado()
 mostrarCarrito()
+btnNavCart()
 inputNews()

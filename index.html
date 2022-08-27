@@ -13,7 +13,7 @@
 
     <!--<script  defer src="./js/index.js"></script>-->
     <script  defer src="./js/dom.js"></script>
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <title>Ragnar Indumentaria</title>
 </head>
@@ -47,11 +47,11 @@
                             Categorias
                             </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><button class="dropdown-item" >Remeras</button></li>
-                        <li><button class="dropdown-item" >Jeans</button></li>
-                        <li><button class="dropdown-item" >Buzos</button></li>
-                        <li><button class="dropdown-item" >Camperas</button></li>
-                        <li><button class="dropdown-item" >Zapatillas</button></li>
+                        <li><button class="dropdown-item remera" >Remeras</button></li>
+                        <li><button class="dropdown-item jean" >Jeans</button></li>
+                        <li><button class="dropdown-item buzo" >Buzos</button></li>
+                        <li><button class="dropdown-item campera" >Camperas</button></li>
+                        <li><button class="dropdown-item zapatillas" >Zapatillas</button></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -68,7 +68,7 @@
     
     
     <main>
-        <section>
+        <section id="section">
         <article class="carrusel">
             
             <div id="carouselExampleIndicators" class="carousel slide carrusel-div" data-bs-ride="true">
