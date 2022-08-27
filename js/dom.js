@@ -138,7 +138,7 @@ function eliminarProd(){
 }*/
 
 function btnNavCart(){
-    btnCart.addEventListener("click" , ()=>{
+    btnCart.addEventListener("click" , (prod)=>{
         section = document.querySelector("#section")
         section.innerHTML = `
         <div class="card" style="width: 18rem;">
