@@ -1,0 +1,11 @@
+const URL = "js/productos.json"
+let productos = []
+let contenidoHTML = []
+const seccion = document.querySelector(".productos1");
+const verCarrito = document.querySelector(".cart");
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+const inputFooter = document.querySelector(".newsLetter")
+const btnSend = document.querySelector("#btnSubmit")
+const totalAPagar = document.querySelector(".total")
+const btnCart = document.querySelector(".addToCart")
+const btnContact = document.querySelector(".contacto")

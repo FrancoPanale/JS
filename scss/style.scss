@@ -8,10 +8,8 @@ body{
     main{
         grid-area: foto foto foto
                     prod1 prod1 prod1
-                    prod2 prod2 prod2
-                    prod3 prod3 prod3
                     contact contact contact
-                    footer footer;
+                    footer footer footer;
         width: 100%;
         margin-top: 30px;
         padding: 25px;
@@ -41,22 +39,15 @@ body{
                 .productos1{
                     grid-area: prod1;
                     display: flex;
+                    flex-wrap: wrap;
                     flex-direction: row;
                     justify-content: center;
                     gap: 50px;
-                    margin: 25px;
-                    border: 5px solid;
+                    margin: 15%;
+                    
                     
                 }
-                .productos2{
-                    grid-area: prod2;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    gap: 50px;
-                    margin: 25px;
-                    border: 5px solid;
-                }
+                
             }
         .cart{
             display: flex;

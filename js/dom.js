@@ -3,10 +3,10 @@
 const alertSweet = (mensaje, icono) => {
     Swal.fire({
         icon: icono,
-        toast:true,
+        toast: true,
         title: mensaje,
         showConfirmButton: false,
-        timer: 1000,
+        timer: 750,
     })
 }
 
@@ -16,108 +16,57 @@ function loginSweet() {
     Swal.fire({
         title: 'Login',
         html:
-            '<input id="swal-input1" class="swal2-input">' +
+            '<input type= "email" id="swal-input1" class="swal2-input">' +
             '<input type = "password" id="swal-input2" class="swal2-input">',
-        
+
 
     })
 }
-let usuario = document.querySelector(".login").addEventListener("click",()=>{
+let usuario = document.querySelector(".login").addEventListener("click", () => {
     loginSweet()
 })
 
+//FETCH
 
-
-
-
-/*function ingresarUsuario(){
-    
-    let  usuario = loginSweet("Ingresa tu usuario:", "email" , "email");
-    let  contraseña = loginSweet("Ingresa tu contraseña","password","Enter your password");
-    
-    while (usuario === "" || usuario === null || contraseña === "" || contraseña === null) {
-        
-        usuario = prompt("Ingrese su usuario:");
-        contraseña = prompt("Ingrese su contraseña:");
-    }
+const aplicandoFetch = async ()=>{
+        await fetch(URL)
+            .then((response)=> response.json())
+            .then((data)=> {
+                productos = data
+                productos.forEach(contenido => {
+                    contenidoHTML += mostrandoContenido(contenido)
+                })
+                seccion.innerHTML = contenidoHTML
+            })
+            .catch(error =>{
+                seccion.innerHTML = errorCarga()
+            })
+            agregarBtn()
 }
-*/
-
-
-
-// ARRAY DE ZAPATILLAS
-
-const zapasNike = [{ id: 9234, nombre: "Nike Air Max", precio: 45000, img: "./img/airMax.jpg" },
-
-{ id: 9235, nombre: "Nike Travis Scott", precio: 55000, img: "./img/nikeTravisScott.jpg" },
-
-{ id: 9236, nombre: "Nike Sb Safari", precio: 50000, img: "./img/nikeSbSafari.jpg" },]
-
-
-//ARRAY DE ROPA
-
-const prendas = [{ id: 1234, nombre: "Remera Trasher", precio: 5000, img: "./img/remeraTrasher1.jpg" },
-
-{ id: 2134, nombre: "Buzo Trasher", precio: 14500, img: "./img/buzoTrasher1.jpg" },
-
-{ id: 6324, nombre: "Jean", precio: 13700, img: "./img/jean1.jpg" },
-
-{ id: 1335, nombre: "Campera Nike ", precio: 29999, img: "./img/camperaNike.jpg" },]
-
-
-const zapatillas = document.querySelector(".productos1");
-const ropa = document.querySelector(".productos2");
-const verCarrito = document.querySelector(".cart");
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-const inputFooter = document.querySelector(".newsLetter")
-const send = document.querySelector("#btnSubmit")
-const totalAPagar = document.querySelector(".total")
-const btnCart = document.querySelector(".addToCart")
-
-function Listado() {
-    zapasNike.forEach((prod) => {
-        zapatillas.innerHTML += `<div class="card" style="width: 18rem;">
-        <img src="${prod.img}" class="card-img-top" alt="Zapatillas">
-        <div class="card-body">
-        <h5 class="card-title">${prod.nombre} $${prod.precio}</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                    <button class="btn btn-dark" id="agregarZ${prod.id}">Agregar al Carrito</button></div>
-                    </div>`
-    })
-
-
-
-    prendas.forEach((prod) => {
-        ropa.innerHTML += `<div class="card" style="width: 18rem;">
-        <img src="${prod.img}" class="card-img-top" alt="Ropa">
-        <div class="card-body">
-            <h5 class="card-title">${prod.nombre} $${prod.precio}</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                <button class="btn btn-dark" id="agregarR${prod.id}">Agregar al Carrito</button>
-                </div>
-            </div>
-    `})
-    agregarBtn()
+aplicandoFetch()
+const mostrandoContenido = (contenido) =>{
+    const{id, nombre, precio, img} = contenido
+    return `<div class="card" style="width: 18rem;">
+    <img src="${contenido.img}" class="card-img-top" alt="${contenido.nombre}">
+    <div class="card-body">
+    <h5 class="card-title" padding= "25px">${contenido.nombre} $${contenido.precio} </h5>
+                <button class="btn btn-dark" id="agregarZ${contenido.id}">Agregar al Carrito</button></div>
+                </div>`
 }
-
-
+const errorCarga = ()=> {
+    return `<div>
+                <h2>Hubo un error al cargar</h2>
+            </div>`
+}
 
 function agregarBtn() {
-    zapasNike.forEach((prod) => {
+    productos.forEach((prod) => {
         document.querySelector(`#agregarZ${prod.id}`)
             .addEventListener("click", () => {
                 agregarAlCarrito(prod)
                 alertSweet("Agregaste al Carrito", "info")
             })
     });
-    prendas.forEach((prod) => {
-        document.querySelector(`#agregarR${prod.id}`)
-            .addEventListener("click", () => {
-                agregarAlCarrito(prod)
-                alertSweet("Agregaste al Carrito", "info")
-            })
-    });
-
 }
 
 
@@ -171,7 +120,8 @@ function eliminarProd() {
 function btnNavCart() {
     btnCart.addEventListener("click", (prod) => {
         section = document.querySelector("#section")
-        section.innerHTML = `
+        seccion.innerHTML = ``
+        seccion.innerHTML = `
         <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">${prod.nombre}</h5>
@@ -186,9 +136,20 @@ function btnNavCart() {
     })
 }
 
-
+function sendForm() {
+    btnContact.addEventListener("click", () => {
+        section.innerHTML = `<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>`
+    })
+}
 function inputNews() {
-    send.addEventListener("click", () => {
+    btnSend.addEventListener("click", () => {
         console.log("click");
         if (inputFooter === "" || inputFooter === null) {
             alertSweet("Debe ingresar su e-mail correctamente", "warning")
@@ -205,7 +166,7 @@ function inputNews() {
 
 
 //ingresarUsuario()
-Listado()
+//Listado()
 mostrarCarrito()
 btnNavCart()
 inputNews()
