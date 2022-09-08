@@ -1,8 +1,11 @@
 body{
     .navbar{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         flex-wrap: nowrap;
+        .title{
+            font-family: 'Uncial Antiqua', cursive;
+        }
     }
     
     main{
@@ -21,8 +24,8 @@ body{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin: 25px;
-                    padding: 20px;
+                    margin: 5px;
+                    padding: 5px;
                     .carrusel-div{
                         width: 50%;
                         .img1{
@@ -43,8 +46,12 @@ body{
                     flex-direction: row;
                     justify-content: center;
                     gap: 50px;
-                    margin: 15%;
-                    
+                    margin: 0 15% 0 15%;
+                    .fondoVikingo{
+                        width: 100%;
+                        border-radius: 25px;
+                        box-shadow: 5px 5px 5px black;
+                    }
                     
                 }
                 
@@ -57,7 +64,8 @@ body{
     }
     footer{
         grid-area: footer;
-        
+        font-family: 'Kanit', sans-serif;
+        font-size: 1.5rem;
         color: antiquewhite;
         display: flex;
         flex-direction: row;
@@ -88,15 +96,9 @@ section{
             font-size: 1rem;
         }
     }
-    .productos2{
-        flex-direction: row;
-        flex-wrap: wrap;
-        p{
-            font-size: 1rem;
-        }
-    }
 }    
 
-//footer{
-//}
+footer{
+    gap: 10px;
+}
 }

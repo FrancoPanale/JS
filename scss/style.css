@@ -1,7 +1,10 @@
 body .navbar {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: nowrap;
+}
+body .navbar .title {
+  font-family: "Uncial Antiqua", cursive;
 }
 body main {
   grid-area: foto foto foto prod1 prod1 prod1 contact contact contact footer footer footer;
@@ -15,8 +18,8 @@ body main section .carrusel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 25px;
-  padding: 20px;
+  margin: 5px;
+  padding: 5px;
 }
 body main section .carrusel .carrusel-div {
   width: 50%;
@@ -37,7 +40,12 @@ body main section .productos1 {
   flex-direction: row;
   justify-content: center;
   gap: 50px;
-  margin: 15%;
+  margin: 0 15% 0 15%;
+}
+body main section .productos1 .fondoVikingo {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px black;
 }
 body main .cart {
   display: flex;
@@ -46,6 +54,8 @@ body main .cart {
 }
 body footer {
   grid-area: footer;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5rem;
   color: antiquewhite;
   display: flex;
   flex-direction: row;
@@ -65,11 +75,7 @@ body footer {
   section .productos1 p {
     font-size: 1rem;
   }
-  section .productos2 {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  section .productos2 p {
-    font-size: 1rem;
+  footer {
+    gap: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

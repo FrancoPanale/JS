@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./scss/style.css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
     <!-- CSS only -->
 
@@ -25,7 +33,7 @@
     <header>
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand title" href="index.html">
                     <img src="./img/logo-axe.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     Ragnar Indumentaria
                 </a>
@@ -66,7 +74,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><button class="dropdown-item contacto">Contactanos</button></li>
+                                <li><a class="dropdown-item contacto" href="#">Contactanos</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -79,7 +87,7 @@
 
 
     <main>
-        <section>
+        <section class="seccion">
             <article class="carrusel">
 
                 <div id="carouselExampleIndicators" class="carousel slide carrusel-div" data-bs-ride="true">
@@ -90,6 +98,10 @@
                             aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -124,12 +136,14 @@
             <!--LISTADO DE PRODUCTOS-->
 
             <article class="productos1">
-                
-                <div class="d-flex justify-content-center">
+                <img src="./img/fondoVikingo.jpg" alt="Vikingos" class="fondoVikingo">
+                <button class="btn btn-dark btn-lg verProductos">Ver productos</button>
+
+                <!-- <div class="d-flex justify-content-center">
                     <div class="spinner-border" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
-                </div>
+                </div> -->
 
             </article>
 

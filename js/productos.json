@@ -86,11 +86,6 @@
         "nombre": "Bermuda Lacoste", 
         "precio": 13550, 
         "img": "./img/bermudaLacoste.jpg" },
-    
-    {   "id": 6328, 
-        "nombre": "Bermuda Levis", 
-        "precio": 12000, 
-        "img": "./img/bermudaLevis.jpg" },
         
     {   "id": 1335, 
         "nombre": "Campera Nike ", 
