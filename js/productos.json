@@ -1,109 +1,212 @@
 [
-    {   "id": 9234,     
-        "nombre": "Nike Air Max Terrascape",        
-        "precio": 53000, 
-        "img": "./img/airMax.jpg" 
+    {
+        "id": 9234,
+        "nombre": "Nike Air Max Terrascape",
+        "precio": 53000,
+        "img": "./img/airMax.jpg",
+        "categoria": "zapatillas"
     },
-
-
-    {   "id": 9235, 
-        "nombre": "Nike Travis Scott", 
-        "precio": 55000, 
-        "img": "./img/nikeTravisScott.jpg" 
+    {
+        "id": 9235,
+        "nombre": "Nike Travis Scott",
+        "precio": 55000,
+        "img": "./img/nikeTravisScott.jpg",
+        "categoria": "zapatillas"
     },
-
-    {   "id": 9236, 
-        "nombre": "Nike Sb Safari", 
-        "precio": 50000, 
-        "img": "./img/nikeSbSafari.jpg" },
-        
-    {   "id": 9237, 
-        "nombre": "Nike Air Max Terrascape", 
-        "precio": 53000, 
-        "img": "./img/airMax2.jpg" },
-        
-    {   "id": 9238, 
-        "nombre": "Nike Air Max 90 se", 
-        "precio": 48500, 
-        "img": "./img/airMax3.jpg" },
-    
-    {   "id": 1234, 
-        "nombre": "Remera Trasher", 
-        "precio": 6990, 
-        "img": "./img/remeraTrasher1.jpg" },
-    
-    {   "id": 1235, 
-        "nombre": "Remera Drew", 
-        "precio": 8500, 
-        "img": "./img/remeraDrew.jpg" },
-    
-    {   "id": 1236, 
-        "nombre": "Remera Drew Rosa", 
-        "precio": 6500, 
-        "img": "./img/remeraDrew2.jpg" },
-    
-    {   "id": 1237, 
-        "nombre": "Remera Adidas", 
-        "precio": 8750, 
-        "img": "./img/remeraAdidas.jpg" },
-    
-    {   "id": 2134, 
-        "nombre": "Buzo Drew Negro", 
-        "precio": 12550, 
-        "img": "./img/buzoDrewNegro.jpg" },    
-    
-    {   "id": 2135, 
-        "nombre": "Buzo Trasher", 
-        "precio": 15500, 
-        "img": "./img/buzoTrasher1.jpg" },    
-    
-    {   "id": 2136, 
-        "nombre": "Buzo Drew Scream", 
-        "precio": 16700, 
-        "img": "./img/buzoDrewScream.jpg" },    
-    
-    {   "id": 2137, 
-        "nombre": "Buzo Nike", 
-        "precio": 12990, 
-        "img": "./img/buzoNike.jpg" },
-    
-    {   "id": 6324, 
-        "nombre": "Jean Azul", 
-        "precio": 13700, 
-        "img": "./img/jean1.jpg" },
-    
-    {   "id": 6325, 
-        "nombre": "Jean Levis Negro", 
-        "precio": 18000, 
-        "img": "./img/jeanLevis.jpg" },
-    
-    {   "id": 6326, 
-        "nombre": "Jean Lacoste", 
-        "precio": 20000, 
-        "img": "./img/jeanLacoste.jpg" },
-    
-    {   "id": 6327, 
-        "nombre": "Bermuda Lacoste", 
-        "precio": 13550, 
-        "img": "./img/bermudaLacoste.jpg" },
-        
-    {   "id": 1335, 
-        "nombre": "Campera Nike ", 
-        "precio": 30000, 
-        "img": "./img/camperaNike.jpg" },
-        
-    {   "id": 1336, 
-        "nombre": "Campera Adidas ", 
-        "precio": 28000, 
-        "img": "./img/camperaAdidas.jpg" },
-        
-    {   "id": 1337, 
-        "nombre": "Campera North Face ", 
-        "precio": 35000, 
-        "img": "./img/camperaNorthFace.jpg" },
-        
-    {   "id": 1338, 
-        "nombre": "Campera de Jean ", 
-        "precio": 15000, 
-        "img": "./img/camperaJean.jpg" }
+    {
+        "id": 9236,
+        "nombre": "Nike Sb Safari",
+        "precio": 50000,
+        "img": "./img/nikeSbSafari.jpg",
+        "categoria": "zapatillas"
+    },
+    {
+        "id": 9237,
+        "nombre": "Nike Air Max Terrascape",
+        "precio": 53000,
+        "img": "./img/airMax2.jpg",
+        "categoria": "zapatillas"
+    },
+    {
+        "id": 9238,
+        "nombre": "Nike Air Max 90 se",
+        "precio": 48500,
+        "img": "./img/airMax3.jpg",
+        "categoria": "zapatillas"
+    },
+    {
+        "id": 9239,
+        "nombre": "Nike Air Max Gore-Tex",
+        "precio": 55750,
+        "img": "./img/gore-tex.jpg",
+        "categoria": "zapatillas"
+    },
+    {
+        "id": 1234,
+        "nombre": "Remera Trasher",
+        "precio": 6990,
+        "img": "./img/remeraTrasher1.jpg",
+        "categoria": "remera"
+    },
+    {
+        "id": 1244,
+        "nombre": "Remera Vans",
+        "precio": 7990,
+        "img": "./img/remeraVans.jpg",
+        "categoria": "remera"
+    },
+    {
+        "id": 1235,
+        "nombre": "Remera Drew",
+        "precio": 8500,
+        "img": "./img/remeraDrew.jpg",
+        "categoria": "remera"
+    },
+    {
+        "id": 1236,
+        "nombre": "Remera Drew Alien ",
+        "precio": 8500,
+        "img": "./img/remeraDrew3.jpg",
+        "categoria": "remera"
+    },
+    {
+        "id": 1266,
+        "nombre": "Remera Drew Tiburon",
+        "precio": 8500,
+        "img": "./img/remeraDrew2.jpg",
+        "categoria": "remera"
+    },
+    {
+        "id": 1237,
+        "nombre": "Remera Vans Gris",
+        "precio": 8750,
+        "img": "./img/remeraVans2.jpg",
+        "categoria": "remera"
+    },
+    {
+        "id": 2134,
+        "nombre": "Buzo Drew Negro",
+        "precio": 12550,
+        "img": "./img/buzoDrewNegro.jpg",
+        "categoria": "buzo"
+    },
+    {
+        "id": 2136,
+        "nombre": "Buzo Drew Scream",
+        "precio": 16700,
+        "img": "./img/buzoDrewScream.jpg",
+        "categoria": "buzo"
+    },
+    {
+        "id": 2135,
+        "nombre": "Buzo Trasher",
+        "precio": 15500,
+        "img": "./img/buzoTrasher1.jpg",
+        "categoria": "buzo"
+    },
+    {
+        "id": 2137,
+        "nombre": "Buzo Nike",
+        "precio": 12990,
+        "img": "./img/buzoNike.jpg",
+        "categoria": "buzo"
+    },
+    {
+        "id": 2138,
+        "nombre": "Buzo Fila Gris",
+        "precio": 13490,
+        "img": "./img/buzoFila.jpg",
+        "categoria": "buzo"
+    },
+    {
+        "id": 2137,
+        "nombre": "Buzo Fila Rojo",
+        "precio": 13490,
+        "img": "./img/buzoFila2.jpg",
+        "categoria": "buzo"
+    },
+    {
+        "id": 6324,
+        "nombre": "Jean Azul",
+        "precio": 13700,
+        "img": "./img/jean1.jpg",
+        "categoria": "pantalon"
+    },
+    {
+        "id": 6325,
+        "nombre": "Jean Levis Negro",
+        "precio": 18000,
+        "img": "./img/jeanLevis.jpg",
+        "categoria": "pantalon"
+    },
+    {
+        "id": 6326,
+        "nombre": "Jean Lacoste",
+        "precio": 20000,
+        "img": "./img/jeanLacoste.jpg",
+        "categoria": "pantalon"
+    },
+    {
+        "id": 6327,
+        "nombre": "Bermuda Lacoste",
+        "precio": 13550,
+        "img": "./img/bermudaLacoste.jpg",
+        "categoria": "pantalon"
+    },
+    {
+        "id": 6328,
+        "nombre": "Jogger Nike",
+        "precio": 13550,
+        "img": "./img/joggerNike.jpg",
+        "categoria": "pantalon"
+    },
+    {
+        "id": 6329,
+        "nombre": "Pantalon Nike Chupin",
+        "precio": 13550,
+        "img": "./img/joggerNike2.jpg",
+        "categoria": "pantalon"
+    },
+    {
+        "id": 1335,
+        "nombre": "Campera Nike ",
+        "precio": 30000,
+        "img": "./img/camperaNike.jpg",
+        "categoria": "campera"
+    },
+    {
+        "id": 1336,
+        "nombre": "Campera Adidas ",
+        "precio": 28000,
+        "img": "./img/camperaAdidas.jpg",
+        "categoria": "campera"
+    },
+    {
+        "id": 1337,
+        "nombre": "Campera North Face ",
+        "precio": 35000,
+        "img": "./img/camperaNorthFace.jpg",
+        "categoria": "campera"
+    },
+    {
+        "id": 1339,
+        "nombre": "Campera Rompevientos Argentina",
+        "precio": 19000,
+        "img": "./img/camperaArgentina.jpg",
+        "categoria": "campera"
+    },
+    {
+        "id": 1340,
+        "nombre": "Campera Rompevientos Nike",
+        "precio": 25000,
+        "img": "./img/camperaRompeVientos.jpg",
+        "categoria": "campera"
+    },
+    {
+        "id": 1338,
+        "nombre": "Campera de Jean ",
+        "precio": 15000,
+        "img": "./img/camperaJean.jpg",
+        "categoria": "campera"
+    }
 ]

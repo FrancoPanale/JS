@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
 body .navbar {
   display: flex;
   flex-direction: row;
@@ -7,10 +14,15 @@ body .navbar .title {
   font-family: "Uncial Antiqua", cursive;
 }
 body main {
-  grid-area: foto foto foto prod1 prod1 prod1 contact contact contact footer footer footer;
+  display: grid;
+  grid-template-areas: "foto foto foto" "prod1 prod1 prod1" "contact contact contact" "footer footer footer";
+  gap: 10px;
   width: 100%;
   margin-top: 30px;
   padding: 25px;
+}
+body main section {
+  width: 100%;
 }
 body main section .carrusel {
   grid-area: foto;
@@ -23,15 +35,11 @@ body main section .carrusel {
 }
 body main section .carrusel .carrusel-div {
   width: 50%;
+  border-radius: 25px;
 }
-body main section .carrusel .carrusel-div .img1 {
-  width: 100%;
-}
-body main section .carrusel .carrusel-div .img2 {
-  width: 100%;
-}
-body main section .carrusel .carrusel-div .img3 {
-  width: 100%;
+body main section .carrusel .carrusel-div img {
+  border-radius: 25px;
+  border: 2px solid;
 }
 body main section .productos1 {
   grid-area: prod1;
@@ -54,14 +62,56 @@ body main .cart {
 }
 body footer {
   grid-area: footer;
-  font-family: "Kanit", sans-serif;
   font-size: 1.5rem;
-  color: antiquewhite;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: space-around;
+  align-items: center;
   padding: 35px;
+}
+body footer .descripcion .div-1 h4 {
+  font-size: 2rem;
+  margin: 10px;
+  padding: 5px;
+}
+body footer .descripcion .div-1 p {
+  font-size: 1rem;
+  margin: 10px;
+  text-align: center;
+}
+body footer .descripcion .div-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body footer .descripcion .div-2 img {
+  width: 2.5rem;
+}
+body footer .descripcion .div-2 h4 {
+  margin: 10px;
+}
+body footer .news {
+  padding: 5px;
+}
+body footer .news button {
+  margin: 15px;
+}
+body footer .news h4 {
+  margin: 10px;
+}
+
+.compra h1 {
+  font-size: 3rem;
+  padding: 15px;
+}
+.compra .cart-new {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
@@ -76,6 +126,19 @@ body footer {
     font-size: 1rem;
   }
   footer {
+    font-size: 1rem;
     gap: 10px;
+    flex-direction: column !important;
+  }
+  footer .news {
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .descripcion {
+    font-size: 1rem;
+  }
+  footer .descripcion .div-1 {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
