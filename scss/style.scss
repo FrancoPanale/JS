@@ -1,4 +1,4 @@
-
+@import "carrito";
 *{
     padding: 0;
     margin: 0;
@@ -18,20 +18,17 @@ body{
     }
     
     main{
-        display: grid;
-        grid-template-areas: "foto foto foto"
-                    "prod1 prod1 prod1"
-                    "contact contact contact"
-                    "footer footer footer";
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 10px;
         width: 100%;
         margin-top: 30px;
         padding: 25px;
             section{
-                
-                width: 100%;
                 .carrusel{
-                    grid-area: foto;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
@@ -48,7 +45,6 @@ body{
                         }
                 }
                 .productos1{
-                    grid-area: prod1;
                     display: flex;
                     flex-wrap: wrap;
                     flex-direction: row;
@@ -64,14 +60,69 @@ body{
                 }
                 
             }
-        .cart{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-        }
-    }
+                
+            //  CARRITO
+            
+            .carrito-titulo{
+                margin: 55px 15px 15px 15px;
+                padding: 10px;
+                font-size: 3rem;
+            }
+            .procesar-compra{
+                width: 100%;
+                margin: 15px;
+                padding: 10px;
+                .mostrar-carrito{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 15px;
+                    margin: 15px;
+                    padding: 10px;
+                    border: 2px solid;
+                    border-radius: 15px;
+                    background-color: #67424D;
+                }
+                .total-carrito{
+                    border: 2px solid;
+                    border-radius: 15px;
+                    margin: 15px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+        
+                    h4{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
+                .btn-fin{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                    .btn-buy{
+                        margin: 5px;
+                        padding: 5px;
+                    }
+                    .btn-empty{
+                        margin: 5px;
+                        padding: 5px;
+                    }
+                }
+            }
+        
+}
+
+
+
+
     footer{
-        grid-area: footer;
+        
         font-size: 1.5rem;
         color: white;
         display: flex;

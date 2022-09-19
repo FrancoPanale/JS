@@ -1,3 +1,58 @@
+.carrito-container {
+  display: flex;
+  flex-direction: column;
+}
+.carrito-container .carrito-titulo {
+  margin: 15px;
+  padding: 10px;
+  font-size: 3rem;
+}
+.carrito-container .procesar-compra {
+  margin: 15px;
+  padding: 10px;
+}
+.carrito-container .procesar-compra .mostrar-carrito {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 15px;
+  background-color: #67424D;
+}
+.carrito-container .procesar-compra .total-carrito {
+  border: 2px solid;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carrito-container .procesar-compra .total-carrito h4 {
+  font-size: 2rem;
+}
+.carrito-container .procesar-compra .total-carrito p {
+  font-size: 1.5rem;
+}
+.carrito-container .procesar-compra .btn-fin {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.carrito-container .procesar-compra .btn-fin .btn-buy {
+  margin: 5px;
+  padding: 5px;
+}
+.carrito-container .procesar-compra .btn-fin .btn-empty {
+  margin: 5px;
+  padding: 5px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,18 +69,17 @@ body .navbar .title {
   font-family: "Uncial Antiqua", cursive;
 }
 body main {
-  display: grid;
-  grid-template-areas: "foto foto foto" "prod1 prod1 prod1" "contact contact contact" "footer footer footer";
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   width: 100%;
   margin-top: 30px;
   padding: 25px;
 }
-body main section {
-  width: 100%;
-}
 body main section .carrusel {
-  grid-area: foto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -42,7 +96,6 @@ body main section .carrusel .carrusel-div img {
   border: 2px solid;
 }
 body main section .productos1 {
-  grid-area: prod1;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -55,13 +108,58 @@ body main section .productos1 .fondoVikingo {
   border-radius: 25px;
   box-shadow: 5px 5px 5px black;
 }
-body main .cart {
+body main .carrito-titulo {
+  margin: 55px 15px 15px 15px;
+  padding: 10px;
+  font-size: 3rem;
+}
+body main .procesar-compra {
+  width: 100%;
+  margin: 15px;
+  padding: 10px;
+}
+body main .procesar-compra .mostrar-carrito {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 15px;
+  background-color: #67424D;
+}
+body main .procesar-compra .total-carrito {
+  border: 2px solid;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .procesar-compra .total-carrito h4 {
+  font-size: 2rem;
+}
+body main .procesar-compra .total-carrito p {
+  font-size: 1.5rem;
+}
+body main .procesar-compra .btn-fin {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+body main .procesar-compra .btn-fin .btn-buy {
+  margin: 5px;
+  padding: 5px;
+}
+body main .procesar-compra .btn-fin .btn-empty {
+  margin: 5px;
+  padding: 5px;
 }
 body footer {
-  grid-area: footer;
   font-size: 1.5rem;
   color: white;
   display: flex;
