@@ -14,3 +14,4 @@ let btnComprar = document.querySelector(".comprar-carrito");
 let btnVaciar = document.querySelector(".vaciar-carrito");
 let acumulador = document.querySelector(".contador");
 let verCarrito = document.querySelector(".mostrar-carrito")
+let ingresarFormulario = document.querySelector(".formulario-contacto")

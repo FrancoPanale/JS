@@ -6,22 +6,43 @@ const alertSweet = (mensaje, icono) => {
         toast: true,
         title: mensaje,
         showConfirmButton: false,
+        position: 'top-end',
         timer: 750,
+        timerProgressBar: true,
     });
 };
 
 
-//INGRESANDO USUARIO
 
-function loginSweet() {
+const compraSweet = (mensaje , icono) =>{
     Swal.fire({
-        title: "Login",
-        html:
-            '<input type= "email" id="swal-input1" class="swal2-input">' +
-            '<input type = "password" id="swal-input2" class="swal2-input">',
+        title: mensaje,
+        showConfirmButton: false,
+        imageUrl: './img/logo-axe.png',
+        imageWidth: 250,
+        imageHeight: 200,
+        imageAlt: 'Paisaje vikingo',
+        icon: icono,
+        timerProgressBar: true,
+        timer:1000,
     });
+};
+
+//INGRESANDO USUARIO
+function login (){
+    const { value: email } = Swal.fire({
+        title: 'Ingresa con tu E-mail',
+        input: 'email',
+        inputLabel: 'Ingresa tu E-mail',
+        inputPlaceholder: 'Enter your email address'
+        })
+        
+        if (email) {
+        Swal.fire(`Hola,${email}`)
+        }
 }
-let usuario = document.querySelector(".login").addEventListener("click", () => { loginSweet();});
+
+let usuario = document.querySelector(".login").addEventListener("click", () => {login();});
 
 //FETCH
 
@@ -107,13 +128,13 @@ function mostrarCarrito() {
 });
 btnVaciar.addEventListener("click", ()=>{
     vaciarCarrito(carrito)
-    alertSweet("Vaciaste el Carrito", "error")
+    compraSweet("Vaciaste el Carrito", "error")
     mostrarCarrito()
     
 })
 btnComprar.addEventListener("click", ()=> {
     vaciarCarrito(carrito)
-    alertSweet("Compra Realizada con exito", "success");
+    compraSweet("Compra Realizada con exito", "success");
     mostrarCarrito()
 })
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -143,32 +164,32 @@ function inputNews() {
     btnSend.addEventListener("click", () => {
         console.log("click");
         if (inputFooter === "" || inputFooter === null) {
-            alertSweet("Debe ingresar su e-mail correctamente", "warning");
+            compraSweet("Debe ingresar su e-mail correctamente", "warning");
         } else {
-            alertSweet("Gracias por suscribirse.", "success");
+            compraSweet("Gracias por suscribirse.", "success");
         }
     });
 }
 
 
 // PAGINA DE CONTACTO
-// function crearFormulario(){
-//     btnContact.addEventListener("click" , () =>{
-//         verFormulario.innerHTML = `<div class="mb-3">
-//         <label for="exampleFormControlInput1" class="form-label">Email address</label>
-//         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-//         </div>
-//         <div class="mb-3">
-//         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-//         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-//         <button class="btn btn-dark btn-send">Enviar</button>
-//         </div>`
-//     })
-//     btnForm = document.querySelector(".btn-send")
-//     .addEventListener("click",() =>{
-//         alertSweet("Te responderemos a la brevedad", "success")
-//     })
-// }
+btnContact.addEventListener("click", ()=> {crearFormulario()})
+function crearFormulario(){
+    ingresarFormulario.innerHTML = `<h1>Contactanos</h1>
+    <div class="mb-3 w-100 container-fluid">
+        <label for="exampleFormControlInput1" class="form-label">Ingresa tu E-mail:</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 w-100 container-fluid">
+        <label for="exampleFormControlTextarea1" class="form-label">Dejanos un comentario:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <button class="btn btn-dark btn-send">Enviar</button>
+        </div>`
+    btnForm = document.querySelector(".btn-send")
+    .addEventListener("click",() =>{
+        compraSweet("Te responderemos a la brevedad", "success")
+    })
+}
 
 
 // FILTRO DE CATEGORIAS
@@ -267,9 +288,7 @@ function verCategoriasZapatilla (){
 }
 
 mostrandoProductos();
-
 inputNews();
-// crearFormulario();
 verCategoriasRemera();
 verCategoriasPantalon();
 verCategoriasBuzo();
